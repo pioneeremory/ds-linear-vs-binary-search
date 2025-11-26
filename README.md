@@ -9,13 +9,31 @@ You are given an unsorted list of integers. Write two functions, one for linear 
 ```python
 # Linear Search
 def linear_search_unsorted(arr, target):
-    # Your code here
-    pass
+    count = 0
+    for i, element in enumerate(arr):
+        count +=1
+        if element == target:
+            return i
+    return -1, counter
+
+print(linear_search_unsorted([1,1,2,3,2,1,5], 5))
 
 # Binary Search
 def binary_search_unsorted(arr, target):
-    # Your code here
-    pass
+    counter = -
+    low, high = 0, len(arr) -1
+    while low <= high:
+        counter += 1
+        mid = (low + high) //2
+        if arr[mid] == target:
+            return mid, counter
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid -1
+    return -1, counter
+
+print(binary_search_unsorted([1,1,2,3,2,1,5], 5))
 
 # Scenario 1 Test
 unsorted_list = [42, 15, 7, 30, 22, 10, 18]
